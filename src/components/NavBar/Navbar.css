@@ -1,0 +1,12 @@
+.Navbar {
+    padding: 20px;
+    /*background: #FF4236;*/
+    background: #FFF;
+    color: #2D70B7;
+}
+
+.logo {
+    width: 200px;
+    margin: 0 auto;
+    display: block;
+}

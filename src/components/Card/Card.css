@@ -1,0 +1,236 @@
+p {
+    margin: 0;
+}
+
+.Card {
+    background: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 10px;
+    max-width: 1000px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+
+
+
+.Card__img {
+    margin: 0 auto;
+}
+
+.Card__types {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Card__type {
+    padding: 5px 10px;
+    /*margin: 10px 10px 10px 10px;*/
+    border-radius: 5px;
+    background: cyan;
+    color: #fff;
+    width: 75px;
+    text-align: center;
+}
+
+.Card__type:nth-child(2) {
+    /*margin-left: 10px;*/
+}
+
+
+
+.Card__name {
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: 800;
+}
+
+.Card__info2 {
+    width: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Card__data {
+    height: 60px;
+    border: 1px solid gray;
+    border-radius: 15px;
+    text-align: center;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Card__data .title {
+    font-weight: 700;
+}
+
+
+
+.Card__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 170px;
+
+}
+
+.Card__id {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /*padding: 0 10px;*/
+    width: 30px;
+    border-right: 1px solid gray;
+    text-align: center;
+    display: none;
+}
+
+.Card__types-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.Card__types-title {
+    text-align: center;
+    margin: 5px;
+}
+
+
+
+.Card__info {
+    margin: 10px 0;
+    display: grid;
+    grid-template-columns: 0.6fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 0.4fr 1.6fr 1.6fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 3px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "types effective effective effective effective"
+    "types damage damage damage damage"
+    "type damageTypes damageTypes damageTypes damageTypes"
+    "type damageTypes damageTypes damageTypes damageTypes";
+}
+
+.types {
+    grid-area: types;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid black;
+    border-top-left-radius: 15px;
+    border-bottom: none;
+    font-weight: 600;
+}
+
+.type {  display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fit, minmax(0px, 1fr));
+    gap: 3px 0;
+    grid-auto-flow: row;
+    grid-template-areas:
+    "."
+    ".";
+    grid-area: type;
+}
+
+.effective {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
+    margin-bottom: 7px;
+    grid-area: effective;
+    font-weight: 600;
+    border-top: 1px solid black;
+    border-right: 1px solid black;
+    border-top-right-radius: 15px;
+}
+
+.damage {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    /*grid-template-rows: repeat(auto-fit, minmax(0px, 1fr));*/
+    /*grid-template-columns : repeat(auto-fit, minmax(0px, 1fr));*/
+    gap: 0px 4px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    ". . . .";
+    grid-area: damage;
+}
+
+.damage__item {
+    border: 1px solid black;
+    border-top-left-radius: 20px;
+    border-bottom: none;
+    font-weight: 600;
+}
+
+.damage__item:nth-child(2n) {
+    border-top-right-radius: 20px;
+    border-top-left-radius: 0px;
+}
+
+
+.damageTypes {  display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /*grid-template-rows: repeat(auto-fit, minmax(0px, 1fr 1fr));*/
+    gap: 3px 4px;
+    grid-auto-flow: row;
+    grid-template-areas:
+    ". . . ."
+    ". . . .";
+    grid-area: damageTypes;
+}
+
+
+.Card__info div {
+
+}
+
+
+.pokemonType {
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+    overflow:hidden;
+    border: 1px solid gray;
+}
+.pokemonType:last-child{
+    border-bottom-right-radius: 15px;
+}
+
+.pokemonType__item {
+    /*margin: 0 10px;*/
+    padding: 2px 0;
+    /*border-radius: 15px;*/
+}
+
+.pokemonType__item:last-child{
+    border-bottom-right-radius: 15px;
+}
+
+.type__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid black;
+    font-weight: 600;
+}
+
+.type__item:last-child {
+    border-bottom-left-radius: 15px;
+}
+
+.Card__info-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
